@@ -1,0 +1,657 @@
+#PLAYERS
+Name         ShreeK~
+Switchname   ShreeK~
+ShortDescr   ~
+LongDescr    ~
+ObjDesc      (null)~
+Description  ~
+Lord         ~
+Kingdom      0
+CPower -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2
+DiscRese     -1
+DiscPoin     0
+Class        1024
+Upgradelevel 0
+Morph        ~
+Createtime   Wed Apr 25 23:00:21 2018~
+Lasttime     Tue Oct  2 15:25:49 2018~
+Lasthost     static-108-51-125-25.washdc.fios.verizon.net~
+Poweraction  ~
+Powertype    ~
+Prompt       ~
+Cprompt      ~
+Decapmessage  ~
+Loginmessage  ~
+Logoutmessage ~
+Avatarmessage ~
+Tiemessage    ~
+Jflags       0
+Sex          1
+Meanparadox  0
+Relrank      0
+Runecount    0
+Revision     1
+Immune       41880575
+Polyaff      0
+Gnosis       0
+Clan         (null)~
+CurrentForm  0
+Rage         0
+Generation   1
+Flag2       0
+Flag3       0
+Flag4       0
+SilTol      0
+Souls	      0
+Itemaffect   640
+Form         1048575
+Beast        15
+Spectype     0
+Specpower    0
+Home         3001
+Level        12
+Trust        12
+Security     9
+Paradox      0 0 0
+Played       119119
+Room         2
+PkPdMkMd     100 0 14 0
+Alos         0
+Awin         0
+Weapons      200 200 200 221 200 200 200 200 200 200 200 200 200
+Spells       200 200 200 200 200
+Combat       0 0 0 0 0 0 0 0
+Stance       -1 200 200 200 200 200 200 200 200 200 200 0
+Stance2      0 0 0 0 0 0 0 -1 -1 -1 -1 -1
+Locationhp   0 0 0 0 0 0 0
+HpManaMove   50000 50000 10000 10000 10000 10000
+Gold         0
+Monkstuff    0
+Monkcrap     0
+Chi       0 0
+Focus     0 0
+Monkab     0 0 0 0
+Gifts    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Garou1        0
+Garou2        0
+Explevel     0
+Expgained    0
+Exp          235087525
+Act          22136
+Special      0
+Newbits      0
+Extra        12
+AffectedBy   128
+Position     9
+Practice     150
+SavingThrow  0
+Alignment    -1000
+XHitroll     0
+XDamroll     0
+Hitroll      1005
+Damroll      1005
+Armor        -1150
+Wimpy        0
+Deaf         0
+Password     Sh6edxbi18frA~
+Bamfin       ~
+Bamfout      ~
+Lastdecap1      ~
+Lastdecap2      ~
+Questsrun    0
+Queststotal  50000
+Title        ~
+Bounty	    0
+Conception   ~
+Parents      ~
+Cparents     ~
+Marriage     ~
+AttrPerm     25 25 25 25 25
+AttrMod      0 0 0 0 0
+Quest        10000
+Wolf         0
+Rank         6
+Language     0 0
+Stage        0 0 0
+Score        -1293413509 1216573 6500 4988 0 0
+Genes        0 0 0 0 0 0 0 0 0 0
+Power        0 524286 18 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Stats        0 2 0 0 0 0 0 0 733000 0 0 0 
+FakeCon      0 0 0 0 0 0 0 0
+Condition    0 48 48
+StatAbility  0 0 0 0
+StatAmount   0 0 0 0
+StatDuration 0 0 0 0
+Exhaustion   0
+Boards       8 General 0 Ideas 0 Announce 0 Bugs 0 Personal 0 Immortal 0 Builder 0 Kingdom 0 
+Skill        100 'acid blast'
+Skill        100 'armor'
+Skill        100 'bless'
+Skill        100 'blindness'
+Skill        100 'burning hands'
+Skill        100 'call lightning'
+Skill        100 'cause critical'
+Skill        100 'cause light'
+Skill        100 'cause serious'
+Skill        100 'change sex'
+Skill        100 'charm person'
+Skill        100 'chill touch'
+Skill        100 'colour spray'
+Skill        100 'continual light'
+Skill        100 'control weather'
+Skill        100 'create food'
+Skill        100 'create spring'
+Skill        100 'create water'
+Skill        100 'cure blindness'
+Skill        100 'cure critical'
+Skill        100 'cure light'
+Skill        100 'cure poison'
+Skill        100 'cure serious'
+Skill        100 'curse'
+Skill        100 'detect evil'
+Skill        100 'detect hidden'
+Skill        100 'detect invis'
+Skill        100 'detect magic'
+Skill        100 'detect poison'
+Skill        100 'dispel evil'
+Skill        100 'dispel magic'
+Skill        100 'earthquake'
+Skill        100 'enchant weapon'
+Skill        100 'energy drain'
+Skill        100 'faerie fire'
+Skill        100 'faerie fog'
+Skill        100 'fireball'
+Skill        100 'flamestrike'
+Skill        100 'fly'
+Skill        100 'gate'
+Skill        100 'giant strength'
+Skill        100 'harm'
+Skill        100 'heal'
+Skill        100 'identify'
+Skill        100 'infravision'
+Skill        100 'invis'
+Skill        100 'know alignment'
+Skill        100 'lightning bolt'
+Skill        100 'locate object'
+Skill        100 'magic missile'
+Skill        100 'mass invis'
+Skill        100 'pass door'
+Skill        100 'poison'
+Skill        100 'protection'
+Skill        100 'readaura'
+Skill        100 'refresh'
+Skill        100 'remove curse'
+Skill        100 'sanctuary'
+Skill        100 'shield'
+Skill        100 'shocking grasp'
+Skill        100 'sleep'
+Skill        100 'stone skin'
+Skill        100 'summon'
+Skill        100 'teleport'
+Skill        100 'ventriloquate'
+Skill        100 'weaken'
+Skill        100 'word of recall'
+Skill        100 'acid breath'
+Skill        100 'fire breath'
+Skill        100 'frost breath'
+Skill        100 'gas breath'
+Skill        100 'lightning breath'
+Skill        100 'Godbless'
+Skill        100 'backstab'
+Skill        100 'disarm'
+Skill        100 'hide'
+Skill        100 'hurl'
+Skill        100 'kick'
+Skill        100 'peek'
+Skill        100 'pick lock'
+Skill        100 'rescue'
+Skill        100 'sneak'
+Skill        100 'steal'
+Skill        100 'general purpose'
+Skill        100 'high explosive'
+Skill        100 'guardian'
+Skill        100 'soulblade'
+Skill        100 'mana'
+Skill        100 'frenzy'
+Skill        100 'darkblessing'
+Skill        100 'portal'
+Skill        100 'energyflux'
+Skill        100 'voodoo'
+Skill        100 'transport'
+Skill        100 'regenerate'
+Skill        100 'clot'
+Skill        100 'mend'
+Skill        100 'punch'
+Skill        100 'quest'
+Skill        100 'minor creation'
+Skill        100 'brew'
+Skill        100 'scribe'
+Skill        100 'carve'
+Skill        100 'engrave'
+Skill        100 'bake'
+Skill        100 'mount'
+Skill        100 'berserk'
+Skill        100 'protection vs good'
+Skill        100 'scan'
+Skill        100 'repair'
+Skill        100 'spellproof'
+Skill        100 'preserve'
+Skill        100 'track'
+Skill        100 'resistance'
+Skill        100 'polymorph'
+Skill        100 'find familiar'
+Skill        100 'improve'
+Skill        100 'group heal'
+End
+
+#OBJECT
+Nest         0
+Name         tanarri claymore~
+ShortDescr   #0A #RFlaming Red #0Claymore#n~
+Description  A flaming red claymore stands against the wall.~
+Questowner   ShreeK~
+Vnum         33200
+ExtraFlags   16385
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    8193
+WearLoc      17
+ItemType     5
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24010
+Values       18000 40 75 3
+End
+
+#OBJECT
+Nest         0
+Name         tanarri claymore~
+ShortDescr   #0A #RFlaming Red #0Claymore#n~
+Description  A flaming red claymore stands against the wall.~
+Questowner   ShreeK~
+Vnum         33200
+ExtraFlags   16385
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    8193
+WearLoc      16
+ItemType     5
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       18000 40 75 3
+End
+
+#OBJECT
+Nest         0
+Name         tanarri bracer~
+ShortDescr   #y{{ #RA #0Tanar'ri #RBracer #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33202
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    4097
+WearLoc      15
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         22050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri bracer~
+ShortDescr   #y{{ #RA #0Tanar'ri #RBracer #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33202
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    4097
+WearLoc      14
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24010
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri collar~
+ShortDescr   #y{{ #RA #0Tanar'ri #RCollar #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33203
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    5
+WearLoc      4
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         28050
+Values       25 0 0 16
+End
+
+#OBJECT
+Nest         0
+Name         tanarri collar~
+ShortDescr   #y{{ #RA #0Tanar'ri #RCollar #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33203
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    5
+WearLoc      3
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24990
+Values       25 0 0 16
+End
+
+#OBJECT
+Nest         0
+Name         tanarri ring~
+ShortDescr   #y{{ #RA #0Tanar'ri #RRing #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33201
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    3
+WearLoc      2
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25000
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri ring~
+ShortDescr   #y{{ #RA #0Tanar'ri #RRing #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33201
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    3
+WearLoc      1
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         28050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri plate~
+ShortDescr   #y{{ #RA #0Tanar'ri #RPlate #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33204
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    9
+WearLoc      5
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         27500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri helmet~
+ShortDescr   #y{{ #RA #0Tanar'ri #RHelmet #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33205
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    17
+WearLoc      6
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 8
+End
+
+#OBJECT
+Nest         0
+Name         tanarri leggings~
+ShortDescr   #y{{ #RA pair of #0Tanar'ri #RLeggings #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33209
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    33
+WearLoc      7
+ItemType     9
+Weight       1
+Condition    99
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri boots~
+ShortDescr   #y{{ #RA pair of #0Tanar'ri #RBoots #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33206
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    65
+WearLoc      8
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri gauntlets~
+ShortDescr   #y{{ #RA pair of #0Tanar'ri #RGauntlets #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33207
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    129
+WearLoc      9
+ItemType     9
+Weight       1
+Condition    99
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         22050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri sleeves~
+ShortDescr   #y{{ #RA pair of #0Tanar'ri #RSleeves #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33208
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    257
+WearLoc      10
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25000
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri cloak~
+ShortDescr   #y{{ #RA #0Tanar'ri #RCloak #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33210
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    1025
+WearLoc      12
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri belt~
+ShortDescr   #y{{ #RA #0Tanar'ri #RBelt #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33211
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    2049
+WearLoc      13
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         26010
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         tanarri visor~
+ShortDescr   #y{{ #RA #0Tanar'ri #RVisor #y}}#n~
+Description  A piece of tanarri eq lies here.~
+Questowner   ShreeK~
+Vnum         33212
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    -1015807
+WearLoc      20
+ItemType     9
+Weight       1
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 0
+End
+
+#END
+<Implementor> Last logged in on Tue Oct  2 15:25:49 2018.
+

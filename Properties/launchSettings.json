@@ -2,7 +2,7 @@
   "profiles": {
     "dystopia-sharp": {
       "commandName": "Project",
-      "workingDirectory": "D:\\dystopia-mud\\Working\\area"
+      "workingDirectory": "D:\\dystopia-mud\\dystopia-sharp\\Working"
     }
   }
 }

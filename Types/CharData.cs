@@ -160,7 +160,7 @@ namespace dystopia_sharp.Types
         public short[] Focus { get; set; }
 
 
-    public const string PLAYER_DIR = "..\\player\\";
+    public const string PLAYER_DIR = "player\\";
 
         CharData(UserConnection conn)
         {

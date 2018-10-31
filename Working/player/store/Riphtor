@@ -1,0 +1,782 @@
+#PLAYERS
+Name         Riphtor~
+Switchname   Riphtor~
+ShortDescr   ~
+LongDescr    ~
+ObjDesc      (null)~
+Description  ~
+Lord         ~
+Kingdom      0
+CPower -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 -2 9 0 0 0 0 0 0 0 0 -2 -2 -2 -2 -2
+DiscRese     30
+DiscPoin     30
+Class        1
+Upgradelevel 0
+Morph        Riphtor the huge hulking demon~
+Createtime   Wed Apr 25 23:04:53 2018~
+Lasttime     Thu Apr 26 21:14:37 2018~
+Lasthost     static-108-51-125-25.washdc.fios.verizon.net~
+Poweraction  ~
+Powertype    ~
+Prompt       ~
+Cprompt      ~
+Decapmessage  ~
+Loginmessage  ~
+Logoutmessage ~
+Avatarmessage ~
+Tiemessage    ~
+Jflags       0
+Sex          1
+Meanparadox  0
+Relrank      0
+Runecount    0
+Revision     1
+Immune       35620927
+Polyaff      128
+Gnosis       0
+Clan         (null)~
+CurrentForm  0
+Rage         0
+Generation   5
+Flag2       0
+Flag3       0
+Flag4       0
+SilTol      0
+Souls	      0
+Itemaffect   768
+Form         1048575
+Beast        15
+Spectype     0
+Specpower    0
+Home         93425
+Level        3
+Trust        0
+Security     0
+Paradox      0 0 0
+Played       11806
+Room         32080
+PkPdMkMd     0 0 1059 0
+Alos         0
+Awin         0
+Weapons      41 138 0 114 0 0 0 0 0 0 96 162 0
+Spells       40 3 33 4 3
+Combat       0 0 0 0 0 0 0 0
+Stance       -1 200 106 0 0 0 0 0 0 0 0 0
+Stance2      2 0 0 0 0 0 0 -1 -1 -1 -1 -1
+Locationhp   0 0 0 0 0 0 0
+HpManaMove   1935 2000 419 1500 1500 1500
+Gold         0
+Warps        1026
+WarpCount    2
+Monkstuff    0
+Monkcrap     0
+Chi       0 0
+Focus     0 0
+Monkab     0 0 0 0
+Gifts    0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Garou1        0
+Garou2        0
+Explevel     0
+Expgained    0
+Exp          17388628
+Act          16799482
+Special      0
+Newbits      786432
+Extra        12
+AffectedBy   2097280
+Position     9
+Practice     0
+SavingThrow  0
+Alignment    -1000
+XHitroll     0
+XDamroll     0
+Hitroll      695
+Damroll      695
+Armor        -1225
+Wimpy        0
+Deaf         0
+Password     RiaN6SWE1rqZE~
+Bamfin       ~
+Bamfout      ~
+Lastdecap1      ~
+Lastdecap2      ~
+Questsrun    0
+Queststotal  0
+Title        ~
+Bounty	    0
+Conception   ~
+Parents      ~
+Cparents     ~
+Marriage     ~
+AttrPerm     25 25 25 25 25
+AttrMod      15 0 0 15 0
+Quest        0
+Wolf         0
+Rank         0
+Language     0 0
+Stage        0 0 0
+Score        7419013 38503 44920 220 0 0
+Genes        0 0 0 0 0 0 0 0 0 0
+Power        268369919 262180 0 0 33120 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Stats        0 7 0 0 0 0 0 0 3622 86122 15 0 
+FakeCon      0 0 0 0 0 0 0 0
+Condition    0 48 48
+StatAbility  0 0 0 0
+StatAmount   0 0 0 0
+StatDuration 0 0 0 0
+Exhaustion   0
+Boards       8 General 0 Ideas 0 Announce 0 Bugs 0 Personal 0 Immortal 0 Builder 0 Kingdom 0 
+Skill        100 'acid blast'
+Skill        100 'armor'
+Skill        100 'bless'
+Skill        100 'blindness'
+Skill        100 'burning hands'
+Skill        100 'call lightning'
+Skill        100 'cause critical'
+Skill        100 'cause light'
+Skill        100 'cause serious'
+Skill        100 'change sex'
+Skill        100 'charm person'
+Skill        100 'chill touch'
+Skill        100 'colour spray'
+Skill        100 'continual light'
+Skill        100 'control weather'
+Skill        100 'create food'
+Skill        100 'create spring'
+Skill        100 'create water'
+Skill        100 'cure blindness'
+Skill        100 'cure critical'
+Skill        100 'cure light'
+Skill        100 'cure poison'
+Skill        100 'cure serious'
+Skill        100 'curse'
+Skill        100 'detect evil'
+Skill        100 'detect hidden'
+Skill        100 'detect invis'
+Skill        100 'detect magic'
+Skill        100 'detect poison'
+Skill        100 'dispel evil'
+Skill        100 'dispel magic'
+Skill        100 'earthquake'
+Skill        100 'enchant weapon'
+Skill        100 'energy drain'
+Skill        100 'faerie fire'
+Skill        100 'faerie fog'
+Skill        100 'fireball'
+Skill        100 'flamestrike'
+Skill        100 'fly'
+Skill        100 'giant strength'
+Skill        100 'harm'
+Skill        100 'heal'
+Skill        100 'identify'
+Skill        100 'infravision'
+Skill        100 'invis'
+Skill        100 'know alignment'
+Skill        100 'lightning bolt'
+Skill        100 'locate object'
+Skill        100 'magic missile'
+Skill        100 'mass invis'
+Skill        100 'pass door'
+Skill        100 'poison'
+Skill        100 'protection'
+Skill        100 'refresh'
+Skill        100 'remove curse'
+Skill        100 'sanctuary'
+Skill        100 'shield'
+Skill        100 'shocking grasp'
+Skill        100 'stone skin'
+Skill        100 'summon'
+Skill        100 'teleport'
+Skill        100 'ventriloquate'
+Skill        100 'weaken'
+Skill        100 'acid breath'
+Skill        100 'fire breath'
+Skill        100 'frost breath'
+Skill        100 'gas breath'
+Skill        100 'lightning breath'
+Skill        100 'backstab'
+Skill        100 'disarm'
+Skill        100 'hide'
+Skill        100 'hurl'
+Skill        100 'kick'
+Skill        100 'peek'
+Skill        100 'pick lock'
+Skill        100 'rescue'
+Skill        100 'sneak'
+Skill        100 'steal'
+Skill        100 'soulblade'
+Skill        100 'mana'
+Skill        100 'frenzy'
+Skill        100 'darkblessing'
+Skill        100 'portal'
+Skill        100 'energyflux'
+Skill        100 'voodoo'
+Skill        100 'transport'
+Skill        100 'regenerate'
+Skill        100 'clot'
+Skill        100 'mend'
+Skill        100 'punch'
+Skill        100 'quest'
+Skill        100 'minor creation'
+Skill        100 'brew'
+Skill        100 'scribe'
+Skill        100 'carve'
+Skill        100 'engrave'
+Skill        100 'bake'
+Skill        100 'mount'
+Skill        100 'berserk'
+Skill        100 'protection vs good'
+Skill        100 'scan'
+Skill        100 'repair'
+Skill        100 'spellproof'
+Skill        100 'preserve'
+Skill        100 'track'
+Skill        100 'resistance'
+Skill        100 'improve'
+Skill        100 'group heal'
+End
+
+#OBJECT
+Nest         0
+Name         demon cape~
+ShortDescr   #0a #Rdemonic #0cape#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33131
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    1025
+WearLoc      12
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         27500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon ring~
+ShortDescr   #0a #Rdemonic #0ring#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33122
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    3
+WearLoc      2
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon ring~
+ShortDescr   #0a #Rdemonic #0ring#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33122
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    3
+WearLoc      1
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon collar~
+ShortDescr   #0a #Rdemonic #0collar#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33123
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    5
+WearLoc      4
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         26950
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon collar~
+ShortDescr   #0a #Rdemonic #0collar#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33123
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    5
+WearLoc      3
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         28050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon plate~
+ShortDescr   #0a #Rdemonic #0plate#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33125
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    9
+WearLoc      5
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25000
+Values       25 0 0 8
+End
+
+#OBJECT
+Nest         0
+Name         demon helmet~
+ShortDescr   #0a #Rdemonic #0helmet#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33126
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    17
+WearLoc      6
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon leggings~
+ShortDescr   #0a pair of #Rdemonic #0leggings#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33127
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    33
+WearLoc      7
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24990
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon boots~
+ShortDescr   #0a pair of #Rdemonic #0boots#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33128
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    65
+WearLoc      8
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    99
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon gauntlets~
+ShortDescr   #0a pair of #Rdemonic #0gauntlets#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33129
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    129
+WearLoc      9
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         26411
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon sleeves~
+ShortDescr   #0a pair of #Rdemonic #0sleeves#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33130
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    257
+WearLoc      10
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         22050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon bracer~
+ShortDescr   #0a #Rdemonic #0bracer#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33124
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    4097
+WearLoc      15
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon bracer~
+ShortDescr   #0a #Rdemonic #0bracer#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33124
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    4097
+WearLoc      14
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         28050
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon belt~
+ShortDescr   #0a #Rdemonic #0belt#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33132
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    2049
+WearLoc      13
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25500
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         demon visor~
+ShortDescr   #0a #Rdemonic #0visor#n~
+Description  A piece of demonic eq lies here.~
+Questowner   Riphtor~
+Vnum         33133
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    -1015807
+WearLoc      20
+ItemType     9
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         26950
+Values       25 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         shortsword demon~
+ShortDescr   #0a #Rdemonic #0shortsword#n~
+Description  A demonic shortsword lies on the ground.~
+Questowner   Riphtor~
+Vnum         33121
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    131
+WearFlags    8193
+WearLoc      19
+ItemType     5
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         25000
+Values       17000 54 79 11
+End
+
+#OBJECT
+Nest         0
+Name         demon longsword~
+ShortDescr   #0a #Rdemonic #0longsword#n~
+Description  A demonic longsword lies on the ground.~
+Questowner   Riphtor~
+Vnum         33120
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    131
+WearFlags    8193
+WearLoc      18
+ItemType     5
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         21609
+Values       18000 54 79 1
+End
+
+#OBJECT
+Nest         0
+Name         demon longsword~
+ShortDescr   #0a #Rdemonic #0longsword#n~
+Description  A demonic longsword lies on the ground.~
+Questowner   Riphtor~
+Vnum         33120
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    131
+WearFlags    8193
+WearLoc      17
+ItemType     5
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         24500
+Values       18000 55 80 1
+End
+
+#OBJECT
+Nest         0
+Name         shortsword demon~
+ShortDescr   #0a #Rdemonic #0shortsword#n~
+Description  A demonic shortsword lies on the ground.~
+Questowner   Riphtor~
+Vnum         33121
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    131
+WearFlags    8193
+WearLoc      16
+ItemType     5
+Weight       1
+Spectype     262144
+Condition    100
+Toughness    100
+Resistance   1
+Quest        1048576
+Level        50
+Timer        0
+Cost         22950
+Values       17000 55 80 11
+End
+
+#OBJECT
+Nest         0
+Name         hilt ebony~
+ShortDescr   an ebony hilt~
+Description  An ebony hilt lies here.~
+Vnum         30064
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    1
+WearLoc      -1
+ItemType     46
+Weight       0
+Condition    100
+Toughness    5
+Resistance   25
+Level        0
+Timer        0
+Cost         10
+Values       0 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         gem onyx~
+ShortDescr   an onyx gem~
+Description  An onyx lies here.~
+Vnum         30061
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    1
+WearLoc      -1
+ItemType     45
+Weight       0
+Condition    100
+Toughness    5
+Resistance   25
+Level        0
+Timer        0
+Cost         9
+Values       0 0 0 0
+End
+
+#OBJECT
+Nest         0
+Name         hilt ebony~
+ShortDescr   an ebony hilt~
+Description  An ebony hilt lies here.~
+Vnum         30064
+ExtraFlags   0
+ExtraFlags2  0
+WeapFlags    0
+WearFlags    1
+WearLoc      -1
+ItemType     46
+Weight       0
+Condition    100
+Toughness    5
+Resistance   25
+Level        0
+Timer        0
+Cost         9
+Values       0 0 0 0
+End
+
+#END
+<Avatar> Last logged in on Thu Apr 26 21:14:37 2018.
+

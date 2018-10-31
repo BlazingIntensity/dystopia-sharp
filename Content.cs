@@ -11,6 +11,7 @@ namespace dystopia_sharp
     public class Content
     {
         public static readonly Logger log = Logger.Create("ContentLogger");
+        const string areaPath = "area";
         const string areaList = "area.lst";
         public static TimeInfo TimeInfo { get; private set; }
         public static Weather Weather { get; private set; }
@@ -49,7 +50,7 @@ namespace dystopia_sharp
             string listContents;
             try
             {
-                listContents = Encoding.ASCII.GetString(File.ReadAllBytes(areaList));
+                listContents = Encoding.ASCII.GetString(File.ReadAllBytes(Path.Combine(areaPath, areaList)));
             }
             catch (Exception e)
             {
@@ -76,7 +77,7 @@ namespace dystopia_sharp
                     string areaContents;
                     try
                     {
-                        areaContents = Encoding.ASCII.GetString(File.ReadAllBytes(curFile));
+                        areaContents = Encoding.ASCII.GetString(File.ReadAllBytes(Path.Combine(areaPath, curFile)));
                     }
                     catch (Exception e)
                     {
