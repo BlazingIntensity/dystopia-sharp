@@ -1,4 +1,5 @@
 ﻿using CryptSharp;
+using dystopia_sharp.Classes;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -11,7 +12,6 @@ namespace dystopia_sharp.Types
 {
     public class CharData
     {
-
         public UserConnection Connection { get; private set; }
         public CharData Next { get; set; }
         public CharData PrevInRoom { get; set; }
@@ -287,6 +287,356 @@ namespace dystopia_sharp.Types
                     case "Breath3": sr.ReadNumber(); break;
                     case "Breath4": sr.ReadNumber(); break;
                     case "Breath5": sr.ReadNumber(); break;
+                    case "Boards":
+                        var numBoards = sr.ReadNumber();
+                        for (int i = 0; i < numBoards; ++i)
+                        {
+                            var boardname = sr.ReadWord();
+                            var lastNote = sr.ReadNumber();
+
+                            var board = BoardData.Lookup(boardname);
+                            if (board == -1)
+                            {
+                                Content.log.Warn($"{ch.Name} had unknown board name: {boardname}. Skipped.");
+                            }
+                            else
+                            {
+                                ch.PCData.LastNote[i] = lastNote;
+                            }
+                        }
+                        break;
+
+                    // C ----------------
+                    case "Clan": ch.Clan = sr.ReadString(); break;
+                    case "Class": ch.Class_ = sr.ReadNumber(); break;
+                    case "CurrentForm": ch.CurForm = sr.ReadShort(); break;
+                    case "Combat":
+                        for (int i = 0; i < 8; ++i)
+                        {
+                            ch.Cmbt[i] = sr.ReadShort();
+                        }
+                        break;
+                    case "Chi":
+                        ch.Chi[0] = sr.ReadShort();
+                        ch.Chi[1] = sr.ReadShort();
+                        break;
+                    case "Conception":
+                        ch.PCData.Conception = sr.ReadString();
+                        break;
+                    case "Condition":
+                        ch.PCData.Condition[0] = sr.ReadNumber();
+                        ch.PCData.Condition[1] = sr.ReadNumber();
+                        ch.PCData.Condition[2] = sr.ReadNumber();
+                        break;
+                    case "CPower":
+                        for (int i = 0; i < 44; ++i)
+                        {
+                            ch.Power[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Cparents": ch.PCData.CParents = sr.ReadString(); break;
+                    case "Cprompt": ch.CPrompt = sr.ReadString(); break;
+                    case "Createtime": ch.CreateTime = sr.ReadString(); break;
+
+                    // D ----------------
+                    case "Damroll": ch.DamRoll = sr.ReadNumber(); break;
+                    case "Deaf": ch.Deaf = sr.ReadNumber(); break;
+                    case "Decapmessage": ch.PCData.DecapMessage = sr.ReadString(); break;
+                    case "Demonic": sr.ReadNumber(); break;
+                    case "Description": ch.Description = sr.ReadString(); break;
+                    case "DiscRese": ch.PCData.DiscResearch = sr.ReadNumber(); break;
+                    case "DiscPoin": ch.PCData.DiscPoints = sr.ReadNumber(); break;
+                    case "Dragonaff": sr.ReadNumber(); break;
+                    case "Dragonage": sr.ReadNumber(); break;
+                    case "Disc": for (int i = 0; i < 11; ++i) sr.ReadNumber(); break;
+                    case "Drowaff": sr.ReadNumber(); break;
+                    case "Drowpwr": sr.ReadNumber(); break;
+                    case "Drowmag": sr.ReadNumber(); break;
+
+                    // E ----------------
+                    case "Email": sr.ReadString(); break;
+                    case "End": return ch;
+                    case "Exhaustion": ch.PCData.Exhaustion = sr.ReadNumber(); break;
+                    case "Exp": ch.Exp = sr.ReadNumber(); break;
+                    case "Explevel": ch.ExpLevel = sr.ReadNumber(); break;
+                    case "Expgained": ch.ExpGained = sr.ReadNumber(); break;
+                    case "Extra": ch.Extra = sr.ReadNumber(); break;
+
+                    // F ----------------
+                    case "FakeCon":
+                        ch.PCData.FakeSkill = sr.ReadNumber();
+                        ch.PCData.FakeStance = sr.ReadNumber();
+                        ch.PCData.FakeHit = sr.ReadNumber();
+                        ch.PCData.FakeDam = sr.ReadNumber();
+                        ch.PCData.FakeAC = sr.ReadNumber();
+                        ch.PCData.FakeHP = sr.ReadNumber();
+                        ch.PCData.FakeMana = sr.ReadNumber();
+                        ch.PCData.FakeMove = sr.ReadNumber();
+                        break;
+                    case "Focus":
+                        ch.Focus[0] = sr.ReadShort();
+                        ch.Focus[1] = sr.ReadShort();
+                        break;
+                    case "Flag2": ch.Flag2 = sr.ReadNumber(); break;
+                    case "Flag3": ch.Flag3 = sr.ReadNumber(); break;
+                    case "Flag4": ch.Flag4 = sr.ReadNumber(); break;
+                    case "Form": ch.Form = sr.ReadNumber(); break;
+
+                    // G ----------------
+                    case "Generation": ch.Generation = sr.ReadShort(); break;
+                    case "Gnosis": ch.Gnosis[Garou.GMAXIMUM] = sr.ReadShort(); break;
+                    case "Genes":
+                        for (int i = 0; i < 10; ++i)
+                        {
+                            ch.PCData.Genes[0] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Garou1": ch.Garou1 = sr.ReadNumber(); break;
+                    case "Garou2": ch.Garou2 = sr.ReadNumber(); break;
+                    case "Gifts":
+                        for (int i = 0; i < 21; ++i)
+                        {
+                            ch.Gifts[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Gold": ch.Gold = sr.ReadNumber(); break;
+
+                    // H ----------------
+                    case "Hitroll": ch.HitRoll = sr.ReadNumber(); break;
+                    case "Home": ch.Home = sr.ReadNumber(); break;
+                    case "Hatch": sr.ReadNumber(); break;
+                    case "HpManaMove":
+                        ch.Hit = sr.ReadNumber();
+                        ch.MaxHit = sr.ReadNumber();
+                        ch.Mana = sr.ReadNumber();
+                        ch.MaxMana = sr.ReadNumber();
+                        ch.Move = sr.ReadNumber();
+                        ch.MaxMove = sr.ReadNumber();
+                        break;
+
+                    // I ----------------
+                    case "Immune": ch.Immune = sr.ReadNumber(); break;
+                    case "Itemaffect": ch.ItemAffect = sr.ReadNumber(); break;
+
+                    // J ----------------
+                    case "Jflags": ch.PCData.JFlags = sr.ReadNumber(); break;
+
+                    // K ----------------
+                    case "Kingdom": ch.PCData.Kingdom = sr.ReadNumber(); break;
+
+                    // L ----------------
+                    case "Language":
+                        ch.PCData.Language[0] = sr.ReadNumber();
+                        ch.PCData.Language[1] = sr.ReadNumber();
+                        break;
+                    case "Lasthost": ch.LastHost = sr.ReadString(); break;
+                    case "Lastdecap1": ch.PCData.LastDecap[0] = sr.ReadString(); break;
+                    case "Lastdecap2": ch.PCData.LastDecap[0] = sr.ReadString(); break;
+                    case "Lasttime": ch.LastTime = sr.ReadString(); break;
+                    case "Level": ch.Level = sr.ReadNumber(); break;
+                    case "Levelexp": sr.ReadNumber(); break;
+                    case "Locationhp":
+                        for (int i = 0; i < 7; ++i)
+                        {
+                            ch.LocHP[i] = sr.ReadShort();
+                        }
+                        break;
+                    case "Loginmessage": ch.PCData.LoginMessage = sr.ReadString(); break;
+                    case "Logoutmessage": ch.PCData.LogoutMessage = sr.ReadString(); break;
+                    case "LongDescr": ch.LongDescription = sr.ReadString(); break;
+                    case "Lord": ch.Lord = sr.ReadString(); break;
+
+                    // M ----------------
+                    case "MageFlags": sr.ReadNumber(); break;
+                    case "Monkab":
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            ch.MonkAb[i] = sr.ReadNumber();
+                        }
+                        break;
+
+                    case "Meanparadox": ch.PCData.MeanParadoxCounter = sr.ReadNumber(); break;
+                    case "Monkstuff": ch.MonkStuff = sr.ReadNumber(); break;
+                    case "Monkcrap": ch.MonkCrap = sr.ReadNumber(); break;
+                    case "Marriage": ch.PCData.Marriage = sr.ReadString(); break;
+                    case "Morph": ch.Morph = sr.ReadString(); break;
+
+                    // N ----------------
+                    case "Newbits": ch.NewBits = sr.ReadNumber(); break;
+                    case "Name": sr.ReadToEOL(); break;
+
+                    // O ----------------
+                    case "Objvnum": ch.PCData.ObjVNum = sr.ReadVnum(); break;
+                    case "ObjDesc": ch.ObjDesc = sr.ReadString(); break;
+
+                    // P ----------------
+                    case "Paradox":
+                        ch.Paradox[0] = sr.ReadNumber();
+                        ch.Paradox[1] = sr.ReadNumber();
+                        ch.Paradox[2] = sr.ReadNumber();
+                        break;
+                    case "Parents": ch.PCData.Parents = sr.ReadString(); break;
+                    case "Password": ch.PCData.Pwd = sr.ReadString(); break;
+                    case "Played": ch.Played = sr.ReadNumber(); break;
+                    case "Polyaff": ch.PolyAff = sr.ReadNumber(); break;
+                    case "Power_Point": sr.ReadNumber(); break;
+                    case "Power":
+                        for (int i = 0; i < 20; ++i)
+                        {
+                            ch.PCData.Powers[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Poweraction": ch.PowerAction = sr.ReadString(); break;
+                    case "Powertype": ch.PowerType = sr.ReadString(); break;
+                    case "Position": ch.Position = sr.ReadNumber(); break;
+                    case "Practice": ch.Practice = sr.ReadNumber(); break;
+                    case "PkPdMkMd":
+                        ch.PKill = sr.ReadNumber();
+                        ch.PDeath = sr.ReadNumber();
+                        ch.MKill = sr.ReadNumber();
+                        ch.MDeath = sr.ReadNumber();
+                        break;
+                    case "Prompt": ch.Prompt = sr.ReadString(); break;
+
+                    // Q ----------------
+                    case "Quest": ch.PCData.Quest = sr.ReadNumber(); break;
+                    case "Questsrun": ch.PCData.QuestsRun = sr.ReadNumber(); break;
+                    case "Queststotal": ch.PCData.QuestsTotal = sr.ReadNumber(); break;
+
+                    // R ----------------
+                    case "Race": ch.PCData.Quest = sr.ReadNumber(); break;
+                    case "Rage": ch.Rage = sr.ReadShort(); break;
+                    case "Rank": ch.PCData.Rank = sr.ReadNumber(); break;
+                    case "Relrank": ch.PCData.RelRank = sr.ReadNumber(); break;
+                    case "Revision": ch.PCData.Revision = sr.ReadNumber(); break;
+                    case "Runecount": ch.PCData.RuneCount = sr.ReadNumber(); break;
+                    case "Room":
+                        RoomDef room;
+                        if (RoomDef.TryGetRoomDef(sr.ReadVnum(), out room)) ch.InRoom = room;
+                        break;
+                    case "Runes":
+                        for (int i = 0; i < 4; ++i) sr.ReadNumber();
+                        break;
+
+                    // S ----------------
+                    case "Smite": sr.ReadString(); break;
+                    case "SavingThrow": ch.SavingThrow = sr.ReadNumber(); break;
+                    case "Switchname": ch.PCData.SwitchName = sr.ReadString(); break;
+                    case "SilTol": ch.SilTol = sr.ReadShort(); break;
+                    case "Souls": ch.PCData.Souls = sr.ReadNumber(); break;
+                    case "Score":
+                        for (int i = 0; i < 6; ++i)
+                        {
+                            ch.PCData.Score[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Sex": ch.Sex = (Gender)sr.ReadShort(); break;
+                    case "ShortDescr": ch.ShortDescription = sr.ReadString(); break;
+                    case "Security": ch.PCData.Security = sr.ReadNumber(); break;
+                    case "Skill":
+                        var value = sr.ReadNumber();
+                        var sn = SkillType.Lookup(sr.ReadWord());
+                        if (sn >= 0) ch.PCData.Learned[sn] = value;
+                        break;
+                    case "Specpower": ch.SpecPower = sr.ReadShort(); break;
+                    case "Spectype": ch.SpecType = sr.ReadShort(); break;
+                    case "Special": ch.Special = sr.ReadNumber(); break;
+                    case "Spells":
+                        for (int i = 0; i < 5; ++i)
+                        {
+                            ch.Spl[i] = sr.ReadShort();
+                        }
+                        break;
+                    case "Stage":
+                        for (int i = 0; i < 3; ++i)
+                        {
+                            ch.PCData.Stage[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Stance":
+                        for (int i = 0; i < 12; ++i)
+                        {
+                            ch.Stance[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Stance2":
+                        for (int i = 0; i < 12; ++i)
+                        {
+                            ch.Stance[i + 12] = sr.ReadNumber();
+                        }
+                        break;
+                    case "StatAbility":
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            ch.PCData.StatAbility[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "StatAmount":
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            ch.PCData.StatAmount[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "StatDuration":
+                        for (int i = 0; i < 4; ++i)
+                        {
+                            ch.PCData.StatDuration[i] = sr.ReadNumber();
+                        }
+                        break;
+                    case "Stats":
+                        for (int i = 0; i < 12; ++i)
+                        {
+                            ch.PCData.Stats[i] = sr.ReadNumber();
+                        }
+                        break;
+
+                    // T ----------------
+                    case "Tiemessage": ch.PCData.TimeMessage = sr.ReadString(); break;
+                    case "Trust": ch.Trust = sr.ReadShort(); break;
+                    case "Title":
+                        var title = sr.ReadString().Trim();
+                        ch.PCData.Title = " " + title;
+                        break;
+
+                    // U ----------------
+                    case "Upgradelevel": ch.PCData.UpgradeLevel = sr.ReadNumber(); break;
+
+                    // V ----------------
+                    case "Vampaff": sr.ReadNumber(); break;
+                    case "Vampgen": sr.ReadNumber(); break;
+                    case "Vnum":
+                        var mdvnum = sr.ReadVnum();
+                        MobileDef md;
+                        if (MobileDef.TryGetMobileDef(mdvnum, out md))
+                        {
+                            ch.IndexData = md;
+                        }
+                        break;
+
+                    // W ----------------
+                    case "Warps": ch.Warp = sr.ReadNumber(); break;
+                    case "WarpCount": ch.WarpCount = sr.ReadShort(); break;
+                    case "Weapons":
+                        for (int i = 0; i < 13; ++i)
+                        {
+                            ch.Wpn[i] = sr.ReadShort();
+                        }
+                        break;
+                    case "Wimpy": ch.Wimpy = sr.ReadShort(); break;
+                    case "Wolf": sr.ReadShort(); break;
+                    case "Wolfform":
+                        sr.ReadNumber();
+                        sr.ReadNumber();
+                        break;
+
+                    // X ----------------
+                    case "XHitroll": ch.XHitRoll = sr.ReadNumber(); break;
+                    case "XDamroll": ch.XDamRoll = sr.ReadNumber(); break;
+
+                    default:
+                        Content.log.Error($"no match.WORD: {word}");
+                        sr.ReadToEOL();
+                        break;
                 }
             }
         }
