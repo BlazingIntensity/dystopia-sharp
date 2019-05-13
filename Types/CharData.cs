@@ -645,5 +645,15 @@ namespace dystopia_sharp.Types
         {
             return true;
         }
+
+        static TType[] ReadArray<TType>(StringReader sr, Func<StringReader, TType> action, int size)
+        {
+            var array = new TType[size];
+            for (int i = 0; i < size; ++i)
+            {
+                array[i] = action(sr);
+            }
+            return array;
+        }
     }
 }
