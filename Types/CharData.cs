@@ -35,7 +35,7 @@ namespace dystopia_sharp.Types
         public List<ObjectData> Carrying { get; set; }
         public RoomDef InRoom { get; set; }
         public RoomDef WasInRoom { get; set; }
-        public dynamic PCData { get; set; }
+        public PCData PCData { get; set; }
         public DoFun LastCmd { get; set; }
         public DoFun PrevCmd { get; set; }
         public string Hunting { get; set; }
@@ -165,7 +165,9 @@ namespace dystopia_sharp.Types
         CharData(UserConnection conn)
         {
             Connection = conn;
-            PCData = new ExpandoObject();
+            //PCData = new ExpandoObject();
+            Stance = new int[24];
+            PCData = new PCData();
         }
 
         public static CharData Load(string name, UserConnection conn)
@@ -234,7 +236,7 @@ namespace dystopia_sharp.Types
                     case "AffectedBy": ch.AffectedBy = sr.ReadNumber(); break;
                     case "Alignment": ch.Alignment = sr.ReadNumber(); break;
                     case "Armor": ch.Armor = sr.ReadNumber(); break;
-                    case "Avatarmessage": ch.PCData.Avatarmessage = sr.ReadString(); break;
+                    case "Avatarmessage": ch.PCData.AvatarMessage = sr.ReadString(); break;
                     case "Awin": ch.PCData.Awins = sr.ReadNumber(); break;
                     case "Alos": ch.PCData.Alosses = sr.ReadNumber(); break;
                     case "Affect":
@@ -256,18 +258,18 @@ namespace dystopia_sharp.Types
                         // TODO add to affect_free
                         break;
                     case "AttrMod":
-                        ch.PCData.ModStr = sr.ReadNumber();
-                        ch.PCData.ModInt = sr.ReadNumber();
-                        ch.PCData.ModWis = sr.ReadNumber();
-                        ch.PCData.ModDex = sr.ReadNumber();
-                        ch.PCData.ModCon = sr.ReadNumber();
+                        ch.PCData.ModStr = sr.ReadShort();
+                        ch.PCData.ModInt = sr.ReadShort();
+                        ch.PCData.ModWis = sr.ReadShort();
+                        ch.PCData.ModDex = sr.ReadShort();
+                        ch.PCData.ModCon = sr.ReadShort();
                         break;
                     case "AttrPerm":
-                        ch.PCData.PermStr = sr.ReadNumber();
-                        ch.PCData.PermInt = sr.ReadNumber();
-                        ch.PCData.PermWis = sr.ReadNumber();
-                        ch.PCData.PermDex = sr.ReadNumber();
-                        ch.PCData.PermCon = sr.ReadNumber();
+                        ch.PCData.PermStr = sr.ReadShort();
+                        ch.PCData.PermInt = sr.ReadShort();
+                        ch.PCData.PermWis = sr.ReadShort();
+                        ch.PCData.PermDex = sr.ReadShort();
+                        ch.PCData.PermCon = sr.ReadShort();
                         break;
                     case "Alias":
                         var ad = new AliasData();
@@ -292,7 +294,7 @@ namespace dystopia_sharp.Types
                         for (int i = 0; i < numBoards; ++i)
                         {
                             var boardname = sr.ReadWord();
-                            var lastNote = sr.ReadNumber();
+                            var lastNote = sr.ReadNumberAsDateTime();
 
                             var board = BoardData.Lookup(boardname);
                             if (board == -1)
@@ -311,28 +313,19 @@ namespace dystopia_sharp.Types
                     case "Class": ch.Class_ = sr.ReadNumber(); break;
                     case "CurrentForm": ch.CurForm = sr.ReadShort(); break;
                     case "Combat":
-                        for (int i = 0; i < 8; ++i)
-                        {
-                            ch.Cmbt[i] = sr.ReadShort();
-                        }
+                        ch.Cmbt = ReadArray(sr, _ => _.ReadShort(), 8);
                         break;
                     case "Chi":
-                        ch.Chi[0] = sr.ReadShort();
-                        ch.Chi[1] = sr.ReadShort();
+                        ch.Chi = ReadArray(sr, _ => _.ReadShort(), 2);
                         break;
                     case "Conception":
                         ch.PCData.Conception = sr.ReadString();
                         break;
                     case "Condition":
-                        ch.PCData.Condition[0] = sr.ReadNumber();
-                        ch.PCData.Condition[1] = sr.ReadNumber();
-                        ch.PCData.Condition[2] = sr.ReadNumber();
+                        ch.PCData.Condition = ReadArray(sr, _ => _.ReadShort(), 3);
                         break;
                     case "CPower":
-                        for (int i = 0; i < 44; ++i)
-                        {
-                            ch.Power[i] = sr.ReadNumber();
-                        }
+                        ch.Power = ReadArray(sr, _ => _.ReadNumber(), 44);
                         break;
                     case "Cparents": ch.PCData.CParents = sr.ReadString(); break;
                     case "Cprompt": ch.CPrompt = sr.ReadString(); break;
@@ -356,7 +349,7 @@ namespace dystopia_sharp.Types
                     // E ----------------
                     case "Email": sr.ReadString(); break;
                     case "End": return ch;
-                    case "Exhaustion": ch.PCData.Exhaustion = sr.ReadNumber(); break;
+                    case "Exhaustion": ch.PCData.Exhaustion = sr.ReadShort(); break;
                     case "Exp": ch.Exp = sr.ReadNumber(); break;
                     case "Explevel": ch.ExpLevel = sr.ReadNumber(); break;
                     case "Expgained": ch.ExpGained = sr.ReadNumber(); break;
@@ -364,18 +357,17 @@ namespace dystopia_sharp.Types
 
                     // F ----------------
                     case "FakeCon":
-                        ch.PCData.FakeSkill = sr.ReadNumber();
-                        ch.PCData.FakeStance = sr.ReadNumber();
-                        ch.PCData.FakeHit = sr.ReadNumber();
-                        ch.PCData.FakeDam = sr.ReadNumber();
+                        ch.PCData.FakeSkill = sr.ReadShort();
+                        ch.PCData.FakeStance = sr.ReadShort();
+                        ch.PCData.FakeHit = sr.ReadShort();
+                        ch.PCData.FakeDam = sr.ReadShort();
                         ch.PCData.FakeAC = sr.ReadNumber();
-                        ch.PCData.FakeHP = sr.ReadNumber();
-                        ch.PCData.FakeMana = sr.ReadNumber();
-                        ch.PCData.FakeMove = sr.ReadNumber();
+                        ch.PCData.FakeHP = sr.ReadShort();
+                        ch.PCData.FakeMana = sr.ReadShort();
+                        ch.PCData.FakeMove = sr.ReadShort();
                         break;
                     case "Focus":
-                        ch.Focus[0] = sr.ReadShort();
-                        ch.Focus[1] = sr.ReadShort();
+                        ch.Focus = ReadArray(sr, _ => _.ReadShort(), 2);
                         break;
                     case "Flag2": ch.Flag2 = sr.ReadNumber(); break;
                     case "Flag3": ch.Flag3 = sr.ReadNumber(); break;
@@ -384,20 +376,14 @@ namespace dystopia_sharp.Types
 
                     // G ----------------
                     case "Generation": ch.Generation = sr.ReadShort(); break;
-                    case "Gnosis": ch.Gnosis[Garou.GMAXIMUM] = sr.ReadShort(); break;
+                    case "Gnosis": ch.Gnosis = new short[Garou.GMAXIMUM] { sr.ReadShort() }; break;
                     case "Genes":
-                        for (int i = 0; i < 10; ++i)
-                        {
-                            ch.PCData.Genes[0] = sr.ReadNumber();
-                        }
+                        ch.PCData.Genes = ReadArray(sr, _ => _.ReadNumber(), 10);
                         break;
                     case "Garou1": ch.Garou1 = sr.ReadNumber(); break;
                     case "Garou2": ch.Garou2 = sr.ReadNumber(); break;
                     case "Gifts":
-                        for (int i = 0; i < 21; ++i)
-                        {
-                            ch.Gifts[i] = sr.ReadNumber();
-                        }
+                        ch.Gifts = ReadArray(sr, _ => _.ReadNumber(), 21);
                         break;
                     case "Gold": ch.Gold = sr.ReadNumber(); break;
 
@@ -426,20 +412,16 @@ namespace dystopia_sharp.Types
 
                     // L ----------------
                     case "Language":
-                        ch.PCData.Language[0] = sr.ReadNumber();
-                        ch.PCData.Language[1] = sr.ReadNumber();
+                        ch.PCData.Language = ReadArray(sr, _ => _.ReadNumber(), 2);
                         break;
                     case "Lasthost": ch.LastHost = sr.ReadString(); break;
                     case "Lastdecap1": ch.PCData.LastDecap[0] = sr.ReadString(); break;
-                    case "Lastdecap2": ch.PCData.LastDecap[0] = sr.ReadString(); break;
+                    case "Lastdecap2": ch.PCData.LastDecap[1] = sr.ReadString(); break;
                     case "Lasttime": ch.LastTime = sr.ReadString(); break;
                     case "Level": ch.Level = sr.ReadNumber(); break;
                     case "Levelexp": sr.ReadNumber(); break;
                     case "Locationhp":
-                        for (int i = 0; i < 7; ++i)
-                        {
-                            ch.LocHP[i] = sr.ReadShort();
-                        }
+                        ch.LocHP = ReadArray(sr, _ => _.ReadShort(), 7);
                         break;
                     case "Loginmessage": ch.PCData.LoginMessage = sr.ReadString(); break;
                     case "Logoutmessage": ch.PCData.LogoutMessage = sr.ReadString(); break;
@@ -449,13 +431,10 @@ namespace dystopia_sharp.Types
                     // M ----------------
                     case "MageFlags": sr.ReadNumber(); break;
                     case "Monkab":
-                        for (int i = 0; i < 4; ++i)
-                        {
-                            ch.MonkAb[i] = sr.ReadNumber();
-                        }
+                        ch.MonkAb = ReadArray(sr, _ => _.ReadNumber(), 4);
                         break;
 
-                    case "Meanparadox": ch.PCData.MeanParadoxCounter = sr.ReadNumber(); break;
+                    case "Meanparadox": ch.PCData.MeanParadoxCounter = sr.ReadShort(); break;
                     case "Monkstuff": ch.MonkStuff = sr.ReadNumber(); break;
                     case "Monkcrap": ch.MonkCrap = sr.ReadNumber(); break;
                     case "Marriage": ch.PCData.Marriage = sr.ReadString(); break;
@@ -471,9 +450,7 @@ namespace dystopia_sharp.Types
 
                     // P ----------------
                     case "Paradox":
-                        ch.Paradox[0] = sr.ReadNumber();
-                        ch.Paradox[1] = sr.ReadNumber();
-                        ch.Paradox[2] = sr.ReadNumber();
+                        ch.Paradox = ReadArray(sr, _ => _.ReadNumber(), 3);
                         break;
                     case "Parents": ch.PCData.Parents = sr.ReadString(); break;
                     case "Password": ch.PCData.Pwd = sr.ReadString(); break;
@@ -481,10 +458,7 @@ namespace dystopia_sharp.Types
                     case "Polyaff": ch.PolyAff = sr.ReadNumber(); break;
                     case "Power_Point": sr.ReadNumber(); break;
                     case "Power":
-                        for (int i = 0; i < 20; ++i)
-                        {
-                            ch.PCData.Powers[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.Powers = ReadArray(sr, _ => _.ReadNumber(), 20);
                         break;
                     case "Poweraction": ch.PowerAction = sr.ReadString(); break;
                     case "Powertype": ch.PowerType = sr.ReadString(); break;
@@ -506,16 +480,16 @@ namespace dystopia_sharp.Types
                     // R ----------------
                     case "Race": ch.PCData.Quest = sr.ReadNumber(); break;
                     case "Rage": ch.Rage = sr.ReadShort(); break;
-                    case "Rank": ch.PCData.Rank = sr.ReadNumber(); break;
-                    case "Relrank": ch.PCData.RelRank = sr.ReadNumber(); break;
-                    case "Revision": ch.PCData.Revision = sr.ReadNumber(); break;
-                    case "Runecount": ch.PCData.RuneCount = sr.ReadNumber(); break;
+                    case "Rank": ch.PCData.Rank = sr.ReadShort(); break;
+                    case "Relrank": ch.PCData.RelRank = sr.ReadShort(); break;
+                    case "Revision": ch.PCData.Revision = sr.ReadShort(); break;
+                    case "Runecount": ch.PCData.RuneCount = sr.ReadShort(); break;
                     case "Room":
                         RoomDef room;
                         if (RoomDef.TryGetRoomDef(sr.ReadVnum(), out room)) ch.InRoom = room;
                         break;
                     case "Runes":
-                        for (int i = 0; i < 4; ++i) sr.ReadNumber();
+                        ReadArray(sr, _ => _.ReadNumber(), 4);
                         break;
 
                     // S ----------------
@@ -523,18 +497,15 @@ namespace dystopia_sharp.Types
                     case "SavingThrow": ch.SavingThrow = sr.ReadNumber(); break;
                     case "Switchname": ch.PCData.SwitchName = sr.ReadString(); break;
                     case "SilTol": ch.SilTol = sr.ReadShort(); break;
-                    case "Souls": ch.PCData.Souls = sr.ReadNumber(); break;
+                    case "Souls": ch.PCData.Souls = sr.ReadShort(); break;
                     case "Score":
-                        for (int i = 0; i < 6; ++i)
-                        {
-                            ch.PCData.Score[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.Score = ReadArray(sr, _ => _.ReadNumber(), 6);
                         break;
                     case "Sex": ch.Sex = (Gender)sr.ReadShort(); break;
                     case "ShortDescr": ch.ShortDescription = sr.ReadString(); break;
                     case "Security": ch.PCData.Security = sr.ReadNumber(); break;
                     case "Skill":
-                        var value = sr.ReadNumber();
+                        var value = sr.ReadShort();
                         var sn = SkillType.Lookup(sr.ReadWord());
                         if (sn >= 0) ch.PCData.Learned[sn] = value;
                         break;
@@ -542,16 +513,10 @@ namespace dystopia_sharp.Types
                     case "Spectype": ch.SpecType = sr.ReadShort(); break;
                     case "Special": ch.Special = sr.ReadNumber(); break;
                     case "Spells":
-                        for (int i = 0; i < 5; ++i)
-                        {
-                            ch.Spl[i] = sr.ReadShort();
-                        }
+                        ch.Spl = ReadArray(sr, _ => _.ReadShort(), 5);
                         break;
                     case "Stage":
-                        for (int i = 0; i < 3; ++i)
-                        {
-                            ch.PCData.Stage[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.Stage = ReadArray(sr, _ => _.ReadShort(), 3);
                         break;
                     case "Stance":
                         for (int i = 0; i < 12; ++i)
@@ -566,28 +531,16 @@ namespace dystopia_sharp.Types
                         }
                         break;
                     case "StatAbility":
-                        for (int i = 0; i < 4; ++i)
-                        {
-                            ch.PCData.StatAbility[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.StatAbility = ReadArray(sr, _ => _.ReadShort(), 4);
                         break;
                     case "StatAmount":
-                        for (int i = 0; i < 4; ++i)
-                        {
-                            ch.PCData.StatAmount[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.StatAmount = ReadArray(sr, _ => _.ReadShort(), 4);
                         break;
                     case "StatDuration":
-                        for (int i = 0; i < 4; ++i)
-                        {
-                            ch.PCData.StatDuration[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.StatDuration = ReadArray(sr, _ => _.ReadShort(), 4);
                         break;
                     case "Stats":
-                        for (int i = 0; i < 12; ++i)
-                        {
-                            ch.PCData.Stats[i] = sr.ReadNumber();
-                        }
+                        ch.PCData.Stats = ReadArray(sr, _ => _.ReadNumber(), 12);
                         break;
 
                     // T ----------------
@@ -599,7 +552,7 @@ namespace dystopia_sharp.Types
                         break;
 
                     // U ----------------
-                    case "Upgradelevel": ch.PCData.UpgradeLevel = sr.ReadNumber(); break;
+                    case "Upgradelevel": ch.PCData.UpgradeLevel = sr.ReadShort(); break;
 
                     // V ----------------
                     case "Vampaff": sr.ReadNumber(); break;
@@ -617,10 +570,7 @@ namespace dystopia_sharp.Types
                     case "Warps": ch.Warp = sr.ReadNumber(); break;
                     case "WarpCount": ch.WarpCount = sr.ReadShort(); break;
                     case "Weapons":
-                        for (int i = 0; i < 13; ++i)
-                        {
-                            ch.Wpn[i] = sr.ReadShort();
-                        }
+                        ch.Wpn = ReadArray(sr, _ => _.ReadShort(), 13);
                         break;
                     case "Wimpy": ch.Wimpy = sr.ReadShort(); break;
                     case "Wolf": sr.ReadShort(); break;
@@ -643,7 +593,10 @@ namespace dystopia_sharp.Types
 
         public bool Authenticate(string password)
         {
-            return true;
+            bool good = false;
+            var hash = Crypter.TraditionalDes.Crypt(password, Name.Substring(0, 2));
+            good = hash == PCData.Pwd;
+            return good;
         }
 
         static TType[] ReadArray<TType>(StringReader sr, Func<StringReader, TType> action, int size)

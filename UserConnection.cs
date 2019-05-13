@@ -114,12 +114,19 @@ namespace dystopia_sharp
             return true;
         }
 
+        static string NormalizeName(string name)
+        {
+            return name.Substring(0, 1).ToUpper() + name.Substring(1);
+        }
+
         bool ProcessLine(string line)
         {
             switch(state)
             {
                 case ConnState.UserName:
                     Character = CharData.Load(line, this);
+
+                    Character.Name = NormalizeName(line);
                     state = ConnState.Pass;
                     break;
                 case ConnState.Pass:

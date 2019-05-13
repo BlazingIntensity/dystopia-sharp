@@ -159,5 +159,13 @@ namespace dystopia_sharp
             return Math.Max(1, number);
 
         }
+
+        public static DateTime ReadNumberAsDateTime(this StringReader sr)
+        {
+            var num = sr.ReadNumber();
+
+            // ???????
+            return DateTime.Now;
+        }
     }
 }
